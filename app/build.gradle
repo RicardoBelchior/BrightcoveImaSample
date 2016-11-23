@@ -30,7 +30,6 @@ dependencies {
     def brightcoveVersion = '4.10.0'
     def leakCanaryVersion = '1.4'
 
-    compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
