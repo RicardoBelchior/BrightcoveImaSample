@@ -2,15 +2,17 @@ package com.rbelchior.brightcoveimasample;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+import com.mirror.news.BrightcoveFullScreenVideoActivity;
+
+public class ActivityPicker extends AppCompatActivity {
+
+    private static final String VIDEO_ID = "5545171251001";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,14 +21,24 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        findViewById(R.id.btn_brightcove_fullscreen_activity)
+                .setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(
+                                BrightcoveFullScreenVideoActivity.newIntent(ActivityPicker.this, VIDEO_ID));
+                    }
+                });
 
-                startActivity(new Intent(MainActivity.this, com.brightcove.player.samples.ima.basic.MainActivity.class));
-            }
-        });
+        findViewById(R.id.btn_main_activity)
+                .setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(
+                                new Intent(ActivityPicker.this,
+                                        com.brightcove.player.samples.ima.basic.MainActivity.class));
+                    }
+                });
     }
 
     @Override

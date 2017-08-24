@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_main"
@@ -9,12 +9,26 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.rbelchior.brightcoveimasample.MainActivity"
+    tools:context="com.rbelchior.brightcoveimasample.ActivityPicker"
     tools:showIn="@layout/activity_main">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click the FAB to open video activity" />
-</RelativeLayout>
+        android:text="Pick one of the video activity" />
+
+    <Button
+        android:id="@+id/btn_brightcove_fullscreen_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Mirror activity" />
+
+    <Button
+        android:id="@+id/btn_main_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open BrightcoveImaSample Activity" />
+
+</LinearLayout>

@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">BrightcoveImaSample</string>
     <string name="action_settings">Settings</string>
+
+    <string name="brightcove_policy_key">BCpkADawqM28zi8KahGMTUwXAo_ZAl46H5RVy_spTqe8qL6RafokmmjZSRLDDmke0fqQB4QLRUSbit2rH2qU_Y9-Qu3lchN6sEc1ANmzKn3AHfRwg04GlkB5aBs</string>
+    <string name="brightcove_account_id">4221396001</string>
+    <string name="brightcove_token">DNRGmEPID9zRZkFSqdlEyV5rdrzgFINbDGpQZ9PFSsU.</string>
+
 </resources>

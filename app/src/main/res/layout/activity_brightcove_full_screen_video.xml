@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.brightcove.player.view.BrightcoveVideoView
+        android:id="@+id/fullscreen_brightcove_view"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.mirror.news.ui.activity.brightcove.BrightcoveFullScreenVideoActivity"
+        android:background="#000"/>
+
+    <com.mirror.news.VideoLoadingView
+        android:id="@+id/video_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</merge>
+

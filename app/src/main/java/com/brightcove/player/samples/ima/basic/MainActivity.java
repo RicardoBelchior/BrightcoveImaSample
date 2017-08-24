@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 
 import com.brightcove.ima.GoogleIMAComponent;
 import com.brightcove.ima.GoogleIMAEventType;
-import com.brightcove.ima.GoogleIMAVideoAdPlayer;
 import com.brightcove.player.event.Event;
 import com.brightcove.player.event.EventEmitter;
 import com.brightcove.player.event.EventListener;
@@ -21,8 +20,8 @@ import com.brightcove.player.model.CuePoint;
 import com.brightcove.player.model.Playlist;
 import com.brightcove.player.model.Source;
 import com.brightcove.player.util.StringUtil;
+import com.brightcove.player.view.BrightcoveExoPlayerVideoView;
 import com.brightcove.player.view.BrightcovePlayer;
-import com.brightcove.player.view.BrightcoveVideoView;
 import com.google.ads.interactivemedia.v3.api.AdDisplayContainer;
 import com.google.ads.interactivemedia.v3.api.AdsRequest;
 import com.google.ads.interactivemedia.v3.api.CompanionAdSlot;
@@ -57,7 +56,7 @@ public class MainActivity extends BrightcovePlayer {
         // management.  Establish the video object and use it's event emitter to get important
         // notifications and to control logging.
         setContentView(R.layout.ima_activity_main);
-        brightcoveVideoView = (BrightcoveVideoView) findViewById(R.id.brightcove_video_view);
+        brightcoveVideoView = (BrightcoveExoPlayerVideoView) findViewById(R.id.brightcove_video_view);
         mediaController = new BrightcoveMediaController(brightcoveVideoView);
         brightcoveVideoView.setMediaController(mediaController);
         super.onCreate(savedInstanceState);
